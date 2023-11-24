@@ -8,11 +8,20 @@ import Sidebar from "../components/sidenav";
 function AdminPage() {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     return (
-        <Flex direction="column" height="100vh">
+        <Box width="100%">
             <SideDrawer />
+            <Box width="100%"
+                padding="2rem 6%"
+                display={isNonMobileScreens ? "flex" : "block"}
+                gap="0.5rem"
+                justifyContent="space-between"
+            >
+
+            
             <Sidebar 
                 position="sticky"
                 top={0}
+                right="-50px"
                 height="100%"
                 width="100%"
            />
@@ -23,7 +32,7 @@ function AdminPage() {
                 display={isNonMobileScreens ? "flex" : "block"}
                 gap="0.5rem"
                 justifyContent="space-between">
-            <Tabs isFitted variant="enclosed">
+            <Tabs isFitted variant="enclosed" width="100%" backgroundColor="white">
             <TabList mb="1em">
                 <Tab>Users</Tab>
                 <Tab>Posts</Tab>
@@ -38,7 +47,8 @@ function AdminPage() {
             </TabPanels>
             </Tabs>
         </Box>
-        </Flex>
+        </Box>
+        </Box>
       
     );
   }

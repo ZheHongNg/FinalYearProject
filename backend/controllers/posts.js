@@ -18,6 +18,7 @@ const createPost = asyncHandler(async (req, res) => {
       userPicturePath: user.picturePath,
       picturePath,
       likes: {},
+      isSuspended: false,
     });
     await newPost.save();
  
