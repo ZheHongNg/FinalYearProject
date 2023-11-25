@@ -4,12 +4,14 @@ import UsersTable from "../components/miscellaneous/UsersTable";
 import PostsTable from "../components/miscellaneous/PostsTable";
 import SideDrawer from "../components/miscellaneous/SideDrawer";
 import Sidebar from "../components/sidenav";
+import { ChatState } from "../Context/ChatProvider";
 
 function AdminPage() {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+    const { user } = ChatState();
     return (
         <Box width="100%">
-            <SideDrawer />
+            {user && <SideDrawer />}
             <Box width="100%"
                 padding="2rem 6%"
                 display={isNonMobileScreens ? "flex" : "block"}
