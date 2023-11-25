@@ -52,20 +52,19 @@ const getUserPosts = asyncHandler(async (req, res) => {
 
 /*Delete*/
 const deletePost = asyncHandler(async (req, res) => {
-  try {
-    const { id } = req.params;
-    const post = await Post.findById(id);
-
-    if (!post) {
-      return res.status(404).json({ message: 'Post not found' });
-    }
-    await Post.findByIdAndRemove(id);
-
-    res.status(200).json({ message: 'Post deleted successfully' });
-  } catch (err) {
-    res.status(404).json({ message: err.message });
+  const { id } = req.params;
+  const updatedPost = await Post.findByIdAndUpdate(
+    id,
+    { isSuspend: true },
+    { new: true }
+  );
+ 
+  if (!updatedPost) {
+    return res.status(404).json({ message: 'Post not found' });
   }
-});
+ 
+  res.status(200).json(updatedPost);
+ });
 
 /* UPDATE */
 const likePost = asyncHandler(async (req, res) => {

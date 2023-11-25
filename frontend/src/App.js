@@ -12,8 +12,7 @@ import { Route, BrowserRouter } from "react-router-dom";
 import Chatpage from "./Pages/Chatpage";
 import Forum from "./components/scenes/forum";
 import AdminPage from "./Pages/adminPage";
-import EditPostPage from "./Pages/postEdit";
-
+import EditPostPage from "./components/PostEditPage/PostEdit";
 
 function App() {
   const mode = useSelector((state) => state.mode);

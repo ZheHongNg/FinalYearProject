@@ -5,12 +5,21 @@ import PostsTable from "../components/miscellaneous/PostsTable";
 import SideDrawer from "../components/miscellaneous/SideDrawer";
 import Sidebar from "../components/sidenav";
 import { ChatState } from "../Context/ChatProvider";
+import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from "react";
+
 
 function AdminPage() {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     const { user } = ChatState();
+    const location = useLocation();
+    const [key, setKey] = useState(0);
+    useEffect(() => {
+        setKey(prevKey => prevKey + 1);
+      }, [location]);
+     
     return (
-        <Box width="100%">
+        <Box key={key} width="100%">
             {user && <SideDrawer />}
             <Box width="100%"
                 padding="2rem 6%"
