@@ -50,6 +50,23 @@ const getUserPosts = asyncHandler(async (req, res) => {
   }
 });
 
+/*Delete*/
+const deletePost = asyncHandler(async (req, res) => {
+  try {
+    const { id } = req.params;
+    const post = await Post.findById(id);
+
+    if (!post) {
+      return res.status(404).json({ message: 'Post not found' });
+    }
+    await Post.findByIdAndRemove(id);
+
+    res.status(200).json({ message: 'Post deleted successfully' });
+  } catch (err) {
+    res.status(404).json({ message: err.message });
+  }
+});
+
 /* UPDATE */
 const likePost = asyncHandler(async (req, res) => {
   try {
@@ -76,4 +93,4 @@ const likePost = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { createPost, getFeedPosts, getUserPosts, likePost };
+module.exports = { createPost, getFeedPosts, getUserPosts, likePost, deletePost};

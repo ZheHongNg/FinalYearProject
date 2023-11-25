@@ -12,6 +12,7 @@ import { Route, BrowserRouter } from "react-router-dom";
 import Chatpage from "./Pages/Chatpage";
 import Forum from "./components/scenes/forum";
 import AdminPage from "./Pages/adminPage";
+import EditPostPage from "./Pages/postEdit";
 
 
 function App() {
@@ -23,9 +24,11 @@ function App() {
       <Route path="/" component={Homepage} exact />
       <Route path="/chats" component={Chatpage} />
       <Route path="/AdminPage" component={AdminPage} />
+
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <Route path="/PostEdit" component={EditPostPage} />
           <Route path="/forum" component={Forum} />
         </ThemeProvider>
       </BrowserRouter>

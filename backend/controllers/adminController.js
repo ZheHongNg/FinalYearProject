@@ -25,34 +25,37 @@ const getAllPosts = asyncHandler(async (req, res) => {
   });
 //update suspend Post
   const suspendPost = asyncHandler(async (req, res) => {
-    try {
-      const {isSuspended} = req.body;
-      const { id } = req.params;
+    const {isSuspend} = req.body;
+    const { id } = req.params;
+    const suspendPost = await Post.findByIdAndUpdate(
+      id,
+      { isSuspend: isSuspend },
+      { new: true }
+    );
 
-
-      const suspendPost = await Post.findByIdAndUpdate(
-        id,
-        { isSuspend: isSuspended },
-        { new: true }
-      );
-  
-      res.status(200).json(suspendedPost);
-    } catch (err) {
-      res.status(404).json({ message: err.message });
+    if (!suspendPost) {
+      return res.status(404).json({ message: 'Post not found' });
     }
+
+    res.status(200).json(suspendPost);
+    
   });
 //update suspend user
   const suspendUser = asyncHandler(async (req, res) => {
     const { isSuspend } = req.body;
     const { id } = req.params;
 
-    const suspendedUser = await User.findByIdAndUpdate(id, { isSuspend: isSuspend}, { new: true });
+    const suspendedUser = await User.findByIdAndUpdate(
+      id, 
+      { isSuspend: isSuspend}, 
+      { new: true }
+      );
    
     if (!suspendedUser) {
       return res.status(404).json({ message: 'User not found' });
     }
    
-    res.status(200).json(user);
+    res.status(200).json(suspendedUser);
    });
 
   module.exports = {suspendPost, suspendUser, getAllUsers, getAllPosts };

@@ -28,6 +28,7 @@ const Sidebar = () => {
         <VStack spacing="1" align="stretch">
           <Button onClick={() => history.push('/chats')} colorScheme="teal" variant="ghost">Chat Page</Button>
           <Button onClick={() => history.push('/forum')} colorScheme="teal" variant="ghost">Forum Page</Button>
+          <Button onClick={() => history.push('/postedit')} colorScheme="teal" variant="ghost">Post Edit Page</Button>
         </VStack>
       </Box>
     );

@@ -4,6 +4,7 @@ const {
     getFeedPosts,
     getUserPosts,
     likePost,
+    deletePost
 } = require("../controllers/posts.js");
 const { protect } = require("../middleware/authMiddleware");
 
@@ -15,5 +16,8 @@ router.get("/:userId/posts",  getUserPosts);
 
 /* UPDATE */
 router.patch("/:id/like",  likePost);
+
+/* Delete */
+router.patch("/:id/delete",  deletePost);
 
 module.exports =  router;
