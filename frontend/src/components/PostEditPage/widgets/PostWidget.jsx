@@ -42,7 +42,7 @@ const PostWidget = ({
  
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/posts/${postId}/delete`, {
+      const response = await axios.delete(`/api/posts/${postId}/delete`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       dispatch(setPosts({ posts: response.data }));
@@ -54,7 +54,7 @@ const PostWidget = ({
   };
 
   return (
-    <WidgetWrapper m="2rem 0">
+    <WidgetWrapper m="2rem 2rem">
       <Typography style={{color: '#858585' }} sx={{ mt: "3rem" }}>
         {name}
       </Typography>

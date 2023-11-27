@@ -47,7 +47,7 @@ const PostWidget = ({
   };
 
   return (
-    <WidgetWrapper m="2rem 0">
+    <WidgetWrapper m="2rem 2rem">
       <Typography style={{color: '#858585' }} sx={{ mt: "3rem" }}>
         {name}
       </Typography>

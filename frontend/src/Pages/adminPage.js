@@ -22,7 +22,6 @@ function AdminPage() {
         <Box key={key} width="100%">
             {user && <SideDrawer />}
             <Box width="100%"
-                padding="2rem 6%"
                 display={isNonMobileScreens ? "flex" : "block"}
                 gap="0.5rem"
                 justifyContent="space-between"
@@ -38,8 +37,6 @@ function AdminPage() {
            />
             <Box 
                 width="100%"
-                padding="2rem 6%"
-                
                 display={isNonMobileScreens ? "flex" : "block"}
                 gap="0.5rem"
                 justifyContent="space-between">

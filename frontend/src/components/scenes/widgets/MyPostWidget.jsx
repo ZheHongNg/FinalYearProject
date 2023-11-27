@@ -60,7 +60,7 @@
      
 
     return (
-      <WidgetWrapper>
+      <WidgetWrapper m="2rem 2rem">
         <FlexBetween gap="1.5rem">
           
           <InputBase
