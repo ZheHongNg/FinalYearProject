@@ -23,7 +23,7 @@ function Homepage() {
   }, [history]);
 
   return (
-    <Container maxW="xl" centerContent>
+    <Container maxW="lg" centerContent mt="8%">
       <Box
         d="flex"
         justifyContent="center"
