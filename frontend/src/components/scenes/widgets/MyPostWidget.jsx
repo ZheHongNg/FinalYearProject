@@ -124,30 +124,21 @@
 
         <FlexBetween>
           <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
-            <ImageOutlined sx={{ color: mediumMain }} />
-            <Typography
-              color={mediumMain}
-              sx={{ "&:hover": { cursor: "pointer", color: medium } }}
-            >
-              Image
-            </Typography>
+            
           </FlexBetween>
 
           {isNonMobileScreens ? (
             <>
               <FlexBetween gap="0.25rem">
-                <GifOutlinedIcon sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Clip</Typography>
+                
               </FlexBetween>
 
               <FlexBetween gap="0.25rem">
-                <AttachFileOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Attachment</Typography>
+                
               </FlexBetween>
 
               <FlexBetween gap="0.25rem">
-                <MicOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Audio</Typography>
+                
               </FlexBetween>
             </>
           ) : (

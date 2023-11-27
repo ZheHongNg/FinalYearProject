@@ -39,7 +39,7 @@ function UsersTable() {
         </Tr>
       </Thead>
       <Tbody>
-        {users.map((user) => (
+        {users.map((user)=> (
           <Tr key={user._id}>
             <Td>{user.name}</Td>
             <Td>{user.email}</Td>

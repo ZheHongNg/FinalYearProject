@@ -7,7 +7,7 @@ const asyncHandler = require("express-async-handler");
 // Endpoint to get all users
 const getAllUsers = asyncHandler(async (req, res) => {
   try {
-    const users = await User.find({});
+    const users = await User.find({isAdmin:{$ne:true}});
     res.json(users);
   } catch (error) {
     res.status(500).json({ message: error.message });
