@@ -25,7 +25,7 @@ const ProfileModal = ({ user, children }) => {
  const [username, setUsername] = useState(user.name);
  const [isEditable, setIsEditable] = useState(false);
  const { _id } = useSelector((state) => state.user);
-
+ const dispatch = useDispatch();
 
  const handleUsernameChange = (event) => {
    setUsername(event.target.value);

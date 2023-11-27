@@ -20,13 +20,14 @@ function App() {
 
   return (
     <div className="App">
-      <Route path="/" component={Homepage} exact />
-      <Route path="/chats" component={Chatpage} />
-      <Route path="/AdminPage" component={AdminPage} />
+
 
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <Route path="/" component={Homepage} exact />
+          <Route path="/chats" component={Chatpage} />
+          <Route path="/AdminPage" component={AdminPage} />
           <Route path="/PostEdit" component={EditPostPage} />
           <Route path="/forum" component={Forum} />
         </ThemeProvider>
