@@ -6,12 +6,17 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import { setLogin } from '../state';
+import { useDispatch } from 'react-redux';
+
 
 const Signup = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const toast = useToast();
   const history = useHistory();
+  const dispatch = useDispatch();
+
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -69,7 +74,8 @@ const Signup = () => {
         position: "bottom",
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
-      setPicLoading(false);
+      dispatch(setLogin({ user: data }))
+      setPicLoading(false);;
       history.push("/chats");
     } catch (error) {
       toast({

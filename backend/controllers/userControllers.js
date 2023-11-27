@@ -30,6 +30,13 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error("Please Enter all the Fields");
   }
 
+  const passwordValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+  if (!passwordValidation.test(password)) {
+    res.status(400);
+    throw new Error("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one special character.");
+  }
+
+
   const userExists = await User.findOne({ email });
 
   if (userExists) {
