@@ -18,12 +18,14 @@ const Sidebar = () => {
         sx={{ overscrollBehavior: 'contain' }}
         top="0"
         w="280px"
-        h="calc(((100vh - 1.5rem) * 100) / 100)"
+        h="auto"
         overflowY="auto"
         className="sidebar-content"
         flexShrink={0}
         bg={bg}
         mr={10}
+        borderRadius="lg"
+      
       >
         <VStack spacing="1" align="stretch">
           <Button onClick={() => history.push('/chats')} colorScheme="teal" variant="ghost">Chat Page</Button>
