@@ -18,7 +18,7 @@ const Sidebar = () => {
         sx={{ overscrollBehavior: 'contain' }}
         top="0"
         w="280px"
-        h="auto"
+        h="90vh"
         overflowY="auto"
         className="sidebar-content"
         flexShrink={0}
