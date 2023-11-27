@@ -25,7 +25,6 @@ const Sidebar = () => {
         bg={bg}
         mr={10}
         borderRadius="lg"
-      
       >
         <VStack spacing="1" align="stretch">
           <Button onClick={() => history.push('/chats')} colorScheme="teal" variant="ghost">Chat Page</Button>
