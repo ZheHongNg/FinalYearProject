@@ -3,7 +3,7 @@
 
 ChemTalking is a Web-based messaging and forum app.
 I used Socket.io for real time messaging.
-i also stores user details in encrypted format in Mongo DB Database.
+I also stores user details in encrypted format in Mongo DB Database.
 ## Tech Stack
 
 **Client:** React JS
