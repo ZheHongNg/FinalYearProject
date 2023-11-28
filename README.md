@@ -19,8 +19,11 @@ i also stores user details in encrypted format in Mongo DB Database.
 ## create .env file
 
 MONGO_URI = mongodb+srv://chemTalkingDB:chemTalkingDB@cluster0.ivkrprj.mongodb.net/?retryWrites=true&w=majority or personal mongoDB
+
 JWT_SECRET=chemTalking
+
 NODE_ENV=production
+
 PORT=5000
 
 ## Run Locally
