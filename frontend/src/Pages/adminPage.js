@@ -39,8 +39,11 @@ function AdminPage() {
                 width="100%"
                 display={isNonMobileScreens ? "flex" : "block"}
                 gap="0.5rem"
-                justifyContent="space-between">
-            <Tabs isFitted variant="enclosed" width="100%" backgroundColor="white">
+                justifyContent="space-between"
+                mr={"2rem"}
+                mt={"2rem"}
+                borderRadius="lg">
+            <Tabs isFitted variant="enclosed" width="100%" backgroundColor="white" borderRadius="lg">
             <TabList mb="1em">
                 <Tab>Users</Tab>
                 <Tab>Posts</Tab>
