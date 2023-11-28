@@ -1,8 +1,9 @@
 
-# Talk-A-Tive
+# ChemTalking
 
-Talk-a-tive is a Full Stack Chatting App.
-Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.
+ChemTalking is a Web-based messaging and forum app.
+I used Socket.io for real time messaging.
+i also stores user details in encrypted format in Mongo DB Database.
 ## Tech Stack
 
 **Client:** React JS
@@ -13,15 +14,12 @@ Uses Socket.io for real time communication and stores user details in encrypted 
   
 ## Demo
 
-https://talk-a-tive.herokuapp.com/
-
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/group%20%2B%20notif.PNG)
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/piyush-eon/mern-chat-app
+  git clone 
 ```
 
 Go to the project directory
