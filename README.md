@@ -11,20 +11,29 @@ i also stores user details in encrypted format in Mongo DB Database.
 **Server:** Node JS, Express JS
 
 **Database:** Mongo DB
+
+**Frontend Library:** Material UI, ChakraUI
   
 ## Demo
+
+## create .env file
+
+MONGO_URI = mongodb+srv://chemTalkingDB:chemTalkingDB@cluster0.ivkrprj.mongodb.net/?retryWrites=true&w=majority or personal mongoDB
+JWT_SECRET=chemTalking
+NODE_ENV=production
+PORT=5000
 
 ## Run Locally
 
 Clone the project
 
-##Using https
+## Using https
 ```bash
   git clone https://github.com/ZheHongNg/FinalYearProject.git
 ```
 
 
-##Using SSH
+## Using SSH
 ```bash
   git clone git@github.com:ZheHongNg/FinalYearProject.git
 ```
@@ -60,4 +69,4 @@ Start the Client
   npm start
 ```
 
-  
+
